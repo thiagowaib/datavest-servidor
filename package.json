@@ -1,0 +1,33 @@
+{
+  "name": "datavest-servidor",
+  "version": "1.0.0",
+  "description": "Repositório para o Servidor do DataVest",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagowaib/datavest-servidor.git"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/thiagowaib/datavest-servidor/issues"
+  },
+  "homepage": "https://github.com/thiagowaib/datavest-servidor#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.4",
+    "nodemon": "^2.0.19"
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  }
+}
