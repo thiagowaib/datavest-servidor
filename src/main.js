@@ -41,7 +41,7 @@ const initServidor = () => {
      */
     const servidor = require('http').Server(app)
     servidor.listen(process.env.SERVER_PORT || 5000, () => {
-        console.log(`Servidor Dotnet online`)
+        console.log(`Servidor DataVest online`)
     })
 }
 

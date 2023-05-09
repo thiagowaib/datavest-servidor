@@ -24,7 +24,15 @@ const {cadastrarUsuario, login, authJWT} = require('./controllers')
 routes.post('/cadastrarUsuario', cadastrarUsuario)
 routes.post('/login', login)
 routes.get('/auth', AuthTokenAcesso, authJWT)
-//// routes.delete('/removerEspaco/:id', AuthTokenAcesso, removerEspacoById)
+
+
+/**
+ * Rotas dos métodos criados
+ * no controlador referente aos Vestibulares
+ * ~ControllerVestibulares
+ */
+ const {criarVestibular_DEBUG} = require('./controllers')
+ routes.post('/criarVestibular', criarVestibular_DEBUG)
 
 // * Exportação das rotas para main.js
 module.exports = routes
