@@ -66,4 +66,11 @@ module.exports = {
             }
         })
     },
+
+    /**
+     * GET: Autêntica o JsonWebToken (JWT)
+     */
+    authJWT(req, res){
+        return res.status(200).send({message: "Token de acesso válido"})
+    },
 }

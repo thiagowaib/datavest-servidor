@@ -20,9 +20,10 @@ const {AuthTokenAcesso} = require('./middlewares')
  * no controlador referente aos Usuarios
  * ~ControllerUsuarios
  */
-const {cadastrarUsuario, login} = require('./controllers')
+const {cadastrarUsuario, login, authJWT} = require('./controllers')
 routes.post('/cadastrarUsuario', cadastrarUsuario)
 routes.post('/login', login)
+routes.get('/auth', AuthTokenAcesso, authJWT)
 //// routes.delete('/removerEspaco/:id', AuthTokenAcesso, removerEspacoById)
 
 // * Exportação das rotas para main.js
