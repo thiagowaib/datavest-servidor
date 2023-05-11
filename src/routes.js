@@ -31,8 +31,8 @@ routes.get('/auth', AuthTokenAcesso, authJWT)
  * no controlador referente aos Vestibulares
  * ~ControllerVestibulares
  */
- const {criarVestibular_DEBUG} = require('./controllers')
- routes.post('/criarVestibular', criarVestibular_DEBUG)
+ const {criarVestibular} = require('./controllers')
+ routes.post('/criarVestibular', criarVestibular)
 
 // * Exportação das rotas para main.js
 module.exports = routes

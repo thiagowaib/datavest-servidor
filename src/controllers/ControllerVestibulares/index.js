@@ -7,7 +7,7 @@ module.exports = {
     /**
     * POST: Cadastrar um novo vestibular (Uso Interno, requer chave de autenticação)
     */
-    criarVestibular_DEBUG(req, res){
+    criarVestibular(req, res){
         const {descricao, data, key} = req.body
         // Busca Usuário pelo Número
         Vestibulares.findOne({descricao: descricao}, async(err, vest) => {
