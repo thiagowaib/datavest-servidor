@@ -9,6 +9,7 @@ module.exports = {
     */
     criarVestibular(req, res){
         const {descricao, data, key} = req.body
+        const {AuthPwd} = require('../../services')
         // Busca Usuário pelo Número
         Vestibulares.findOne({descricao: descricao}, async(err, vest) => {
             if(err) return res.status(500).send({error: err})
