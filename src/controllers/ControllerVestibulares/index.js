@@ -42,6 +42,7 @@ module.exports = {
             let dados = await Vestibulares.find()
 
             dados = dados.map(dado => ({
+                id: dado._id.toString(),
                 descricao: dado.descricao,
                 prefere: preferencias.includes(dado._id.toString())
             }))
@@ -53,6 +54,7 @@ module.exports = {
             let dados = await Vestibulares.find()
 
             return res.status(200).send(dados.map(dado=>({
+                id: dado._id.toString(),
                 descricao: dado.descricao,
                 prefere: true,
             })))
