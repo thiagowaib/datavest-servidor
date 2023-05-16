@@ -31,8 +31,10 @@ routes.get('/auth', AuthTokenAcesso, authJWT)
  * no controlador referente aos Vestibulares
  * ~ControllerVestibulares
  */
- const {listarDatas} = require('./controllers')
- routes.post('/listarDatas', listarDatas)
+const {listarDatas, buscarPreferencias, alterarPreferencias} = require('./controllers')
+routes.post('/listarDatas', listarDatas)
+routes.post('/buscarPreferencias', buscarPreferencias)
+routes.put('/alterarPreferencias', alterarPreferencias)
 
 // * Exportação das rotas para main.js
 module.exports = routes
