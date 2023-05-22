@@ -17,12 +17,26 @@ module.exports = {
                 dados.push({descricao: vest.descricao, data: vest.data})
             }
 
+            dados.sort((a, b) => {
+                let dataA = new Date(a.data.split("/")[2], a.data.split("/")[1], a.data.split("/")[0])
+                let dataB = new Date(b.data.split("/")[2], b.data.split("/")[1], b.data.split("/")[0])
+                return dataA.getTime() - dataB.getTime()
+            })
+
             return res.status(200).send(dados)
         } 
         // Caso não exista preferência configurada
         else {
             let dados = await Vestibulares.find()
-            return res.status(200).send(dados.map(dado=>({descricao: dado.descricao, data: dado.data})))
+
+            dados = dados.map(dado=>({descricao: dado.descricao, data: dado.data}))
+            dados.sort((a, b) => {
+                let dataA = new Date(a.data.split("/")[2], a.data.split("/")[1], a.data.split("/")[0])
+                let dataB = new Date(b.data.split("/")[2], b.data.split("/")[1], b.data.split("/")[0])
+                return dataA.getTime() - dataB.getTime()
+            })
+
+            return res.status(200).send(dados)
         }
     },
 
