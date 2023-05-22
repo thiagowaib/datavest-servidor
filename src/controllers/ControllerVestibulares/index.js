@@ -13,8 +13,10 @@ module.exports = {
             let dados = []
 
             for(let i = 0; i < vestibulares.length; i++) {
-                const vest = await Vestibulares.findById(vestibulares[i])
-                dados.push({descricao: vest.descricao, data: vest.data})
+                if(vestibulares[i] != '.') {
+                    const vest = await Vestibulares.findById(vestibulares[i])
+                    if(vest != null){dados.push({descricao: vest.descricao, data: vest.data})}
+                }
             }
 
             dados.sort((a, b) => {
@@ -88,7 +90,7 @@ module.exports = {
         // Salvamento do novo objeto
         usuario.save((err)=>{
             if(err) return res.status(400).send({message: "Falha ao alterar preferências", error: err})
-            else return res.status(201).send({message: "Preferências alteradas com sucesso"})
+            else return res.status(200).send({message: "Preferências alteradas com sucesso"})
         })
     }
 }
