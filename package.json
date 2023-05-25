@@ -4,7 +4,8 @@
   "description": "Repositório para o Servidor do DataVest",
   "main": "src/main.js",
   "scripts": {
-    "start": "nodemon ."
+    "start": "nodemon .",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -29,5 +30,8 @@
   "engines": {
     "node": "16.x",
     "npm": "8.x"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
