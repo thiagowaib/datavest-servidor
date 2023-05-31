@@ -9,7 +9,7 @@ module.exports = {
         const {vestibulares} = req.body
 
         // Verifica se há vestibulares a serem filtrados
-        if(vestibulares && vestibulares.length > 0) {
+        if(vestibulares && vestibulares.length > 0 && vestibulares.toString() != '.') {
             let dados = []
 
             for(let i = 0; i < vestibulares.length; i++) {
