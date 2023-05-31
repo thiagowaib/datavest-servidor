@@ -54,7 +54,7 @@ module.exports = {
         const preferencias = usuario.preferencias
 
         // Caso haja preferencias
-        if(preferencias && preferencias.length > 0 && vestibulares.toString() != '.') {
+        if(preferencias && preferencias.length > 0 && preferencias.toString() != '.') {
             let dados = await Vestibulares.find()
 
             dados = dados.map(dado => ({
